@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Happy Birthday!</title>
+    <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
+  </head>
+  <body>
+    <h2>Happy Birthday,</h2>
+    <pre id="readout">Waiting for data...</pre>
+    <p>you are</p>
+    <p id="age"></p>
+    <script>
+      grist.ready();
+      grist.onRecord(function(record) {
+        document.getElementById('readout').innerHTML = record.Full_Name;
+        document.getElementById('age').innerHTML = record.Age;
+      });
+    </script>
+  </body>
+</html>
