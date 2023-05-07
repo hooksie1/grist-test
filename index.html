@@ -5,53 +5,51 @@
     <title>Happy Birthday!</title>
     <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
     <script>
-var colors = ["#8b5642", "#6a696b"];
+        var colors = ["#8b5642", "#6a696b"];
 
-function frame() {
-  confetti({
-    particleCount: 2,
-    angle: 60,
-    spread: 55,
-    origin: { x: 0 },
-    colors: colors,
-  });
-  confetti({
-    particleCount: 2,
-    angle: 120,
-    spread: 55,
-    origin: { x: 1 },
-    colors: colors,
-  });
+        function frame() {
+          confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors,
+          });
+          confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: colors,
+          });
 
-  if (Date.now() < Date.now() + 15000) {
-    requestAnimationFrame(frame);
-  }
-}
+          if (Date.now() < Date.now() + 15000) {
+            requestAnimationFrame(frame);
+          }
+        }
 
-window.onload = frame();
-
+        window.onload = frame();
     </script>
     <style>
       .office-banner {
-  background-color: #e2ddd8;
-  font-family: "Arial";
-  padding: 0.125em;
-  font-size: 4em;
-  text-align: center;
-  white-space: nowrap;
-  transform: rotate(-10deg);
-  position: fixed;
-  top: 40%;
-  left: -5%;
-  right: -5%;
-  z-index: 100;
-  margin-top: 0;
-}
-
+        background-color: #e2ddd8;
+        font-family: "Arial";
+        padding: 0.125em;
+        font-size: 4em;
+        text-align: center;
+        white-space: nowrap;
+        transform: rotate(-10deg);
+        position: fixed;
+        top: 40%;
+        left: -5%;
+        right: -5%;
+        z-index: 100;
+        margin-top: 0;
+      }
     </style>
   </head>
   <body>
-    <h1 class=""office-banner">It Is Your Birthday.</h2>
+    <h1 class="office-banner">It Is Your Birthday.</h2>
     <h2>Happy Birthday</h2>
     <h2 id="readout"></h2>
     <p>you are</p>
